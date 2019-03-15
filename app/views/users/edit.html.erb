@@ -12,13 +12,13 @@
           </div>
         <% end %>
         <%= f.input_field :profile_image, as: :file, accept: 'image/*' %>
+        <%= f.input :password, autocomplete: 'new-password', input_html: { class: 'fit-input' }, hint: '空欄のままなら変更しません' %>
+        <%= f.input :password_confirmation, autocomplete: 'new-password', input_html: { class: 'fit-input' } %>
+        <div class="form-group">
+          <%= f.submit class: 'btn btn-primary' %>
+          <%= link_to 'キャンセル', :back, class: 'btn page-link text-dark d-inline-block' %>
+        </div>
       <% end %>
-      <%= f.input :password, autocomplete: 'new-password', input_html: { class: 'fit-input' }, hint: '空欄のままなら変更しません' %>
-      <%= f.input :password_confirmation, autocomplete: 'new-password', input_html: { class: 'fit-input' } %>
-      <div class="form-group">
-        <%= f.submit class: 'btn btn-primary' %>
-        <%= link_to 'キャンセル', :back, class: 'btn page-link text-dark d-inline-block' %>
-      </div>
     </div>
   <% end %>
 </div>

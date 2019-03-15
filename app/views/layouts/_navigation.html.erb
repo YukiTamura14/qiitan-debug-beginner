@@ -6,7 +6,9 @@
         <div class="input-group">
           <%= f.search_field :title_or_body_cont, class: 'form-control', placeholder: 'キーワードを入力' %>
           <div class="input-group-append fit-input">
-            <span class="input-group-text"><%= icon('fas', 'search') %></span>
+           <%= button_tag type: 'submit' ,class: 'input-group-text' do %>
+             <%= icon('fas', 'search') %>
+           <% end %>
           </div>
         </div>
     <% end %>

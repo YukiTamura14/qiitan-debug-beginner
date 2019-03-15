@@ -5,7 +5,6 @@ class UserMailer < ApplicationMailer
   end
 
   def password_reset(user)
-    @user = user
     mail to: user.email, subject: '[QiitanDebugBeginner]パスワードの再設定について'
   end
 end
